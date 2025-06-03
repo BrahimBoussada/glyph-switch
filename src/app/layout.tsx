@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fira_Mono, Geist, Lora } from "next/font/google";
 import "./globals.css";
 import { FontProvider } from "@/context/font-context";
+import Head from "@/script/head";
 
 // Sans-serif font with CSS variable
 const geistSans = Geist({
@@ -40,6 +41,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Head />
+      </head>
       <body
         className={`${geistSans.variable} ${crimsonSerif.variable} ${JetBrainMono.variable} antialiased`}
       >
