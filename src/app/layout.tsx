@@ -1,15 +1,29 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Fira_Mono, Geist, Lora } from "next/font/google";
 import "./globals.css";
 
+// Sans-serif font with CSS variable
 const geistSans = Geist({
-  variable: "--font-geist-sans",
+  variable: "--font-sans",
+  weight: ["400", "600", "700"],
   subsets: ["latin"],
+  style: ["normal"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// Serif font with CSS variable
+const crimsonSerif = Lora({
+  variable: "--font-serif",
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  style: ["normal", "italic"],
+});
+
+// Monospace font with CSS variable
+const JetBrainMono = Fira_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal"],
 });
 
 export const metadata: Metadata = {
@@ -26,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${crimsonSerif.variable} ${JetBrainMono.variable} antialiased`}
       >
         {children}
       </body>
