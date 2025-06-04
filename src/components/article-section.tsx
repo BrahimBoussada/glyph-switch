@@ -5,10 +5,25 @@ import { motion } from "motion/react";
 import { useFont } from "@/context/font-context";
 import { cn } from "@/lib/utils";
 import urbanSolitude from "../../public/urbanSolitude.jpeg";
+import { useEffect, useState } from "react";
 
 export default function ArticleSection() {
   const { font } = useFont(); // Access current font from context
+  const [ready, setReady] = useState(false);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setReady(true);
+    }, 700);
+
+    // Cleanup on unmount
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!ready) {
+    // You can return null or a loader/spinner if you want here
+    return null;
+  }
   return (
     <div className="px-4 max-w-3xl mx-auto flex flex-col gap-8 mt-16 mb-36">
       {/* Animated heading */}
@@ -37,6 +52,7 @@ export default function ArticleSection() {
           className="object-cover object-bottom"
           priority
           quality={100}
+          placeholder="blur"
         />
       </motion.div>
 
