@@ -3,6 +3,7 @@
 import { FontType, useFont } from "@/context/font-context";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
+import { useEffect, useState } from "react";
 
 // Font options with label and Tailwind font class
 const fonts: { name: FontType; label: string; className: string }[] = [
@@ -13,7 +14,21 @@ const fonts: { name: FontType; label: string; className: string }[] = [
 
 export default function FontToggle() {
   const { font, setFont } = useFont();
+  const [ready, setReady] = useState(false);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setReady(true);
+    }, 700);
+
+    // Cleanup on unmount
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!ready) {
+    // You can return null or a loader/spinner if you want here
+    return null;
+  }
   return (
     <motion.div
       initial={{ opacity: 0 }}

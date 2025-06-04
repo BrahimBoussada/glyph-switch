@@ -91,4 +91,25 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Scrollbar Width */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--color-background);
+  }
+
+  /* Scrollbar Thumb */
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-background);
+    border-radius: var(--radius-sm);
+  }
+
+  /* Scrollbar Thumb Hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-muted-foreground);
+  }
 }
