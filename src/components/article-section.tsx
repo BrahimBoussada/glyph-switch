@@ -71,37 +71,30 @@ export default function ArticleSection() {
         )}
       >
         {/* Article paragraphs */}
-        <p>The world forgets, but time remembers.</p>
         <p>
-          Once, the Sumerians etched their stories into clay under the
-          Mesopotamian sun—the first to write, the first to dream in cities. Now
-          their crumble beneath desert winds. The Egyptians raised monuments to
-          eternity, pyramids meant to defy time itself. Yet the desert crept in,
-          and the false gods they worshipped faded from human memory. The Greeks
-          gave us philosophy and democracy. The Romans, law and empire. The
-          Mayans charted stars with staggering precision. The Indus Valley
-          carved order into the chaos of river and rain. Each of them built
-          wonders, and each of them fell.
-        </p>
-        <p>And now, here we are.</p>
-        <p>
-          Modern humanity chases immortality through machines. Silicon has
-          replaced stone. We believe our servers and satellites will endure
-          where temples and scrolls failed. But this, too, is a kind of
-          delusion.
+          Everything comes and goes. Empires rise and fall. Cities are built,
+          then crumble. The Sumerians pressed their stories into clay, the
+          Egyptians reached the heavens with towering pyramids, the Greeks
+          defied certainty and pushed the limits of thought, the Romans forged
+          laws to hold empires together, and the Mayans traced the patterns of
+          the stars. Each contributed in their own way, seeking meaning through
+          what they could create.
         </p>
         <p>
-          Civilizations fall. Not from a single blow, but from within—through
-          decay, distraction, hubris. We drown in data and mistake it for
-          wisdom. We accelerate, many not knowing where {"we’re"} going. In our
-          techno-pursuit, we risk becoming ghosts ourselves, disconnected from
-          nature, from history, from meaning.
+          Time moves quietly and without haste. Monuments erode, empires
+          transform, and civilizations pass. What lingers is not the structures
+          or records themselves, but the intentions behind them, and the care
+          with which knowledge, tools, and power were used.
         </p>
         <p>
-          Everything we build will one day be dust. This is a reminder. To live
-          deeply. To build wisely. To remember that every beginning has an end.
+          True significance grows through curiosity, collaboration, and positive
+          impact on others. What we create, how we act, and the ways we support
+          others leave echoes that endure beyond any single lifetime or empire.
         </p>
-        <p>One question endures: What awaits us beyond the end?</p>
+        <p>
+          Everything is fleeting. What remains is the thoughtfulness behind our
+          actions, and the quiet trace of goodness that survives through time.
+        </p>
       </motion.div>
     </div>
   );
